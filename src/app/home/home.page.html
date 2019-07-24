@@ -8,7 +8,10 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-button expand="full" fill="outline" (click)="listPairedDevices()">Buscar Dispositivos</ion-button>
+
+    <ion-list *ngFor="let i of pairedList;let j=index" (click)="connect(i.address)">
+      <ion-label>{{i.name}}</ion-label>
+    </ion-list>
   </div>
 </ion-content>

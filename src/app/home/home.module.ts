@@ -5,8 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { Printer } from '@ionic-native/printer/ngx';
+import { BluetoothSerial } from '@ionic-native/bluetooth-serial/ngx';
 
 @NgModule({
+  providers: [
+    Printer,
+    BluetoothSerial,
+  ],
   imports: [
     CommonModule,
     FormsModule,
